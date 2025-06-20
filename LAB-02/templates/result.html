@@ -1,0 +1,85 @@
+<!-- result.html -->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kết quả</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+    <style>
+        body {
+            background-color: #f8f9fa;
+        }
+
+        .result-container {
+            max-width: 600px;
+            margin: 60px auto;
+            background-color: #ffffff;
+            padding: 40px;
+            border-radius: 10px;
+            box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+        }
+
+        h1 {
+            text-align: center;
+            margin-bottom: 30px;
+        }
+
+        .result-box {
+            padding: 20px;
+            background-color: #e9f7ef;
+            border-left: 5px solid #28a745;
+            border-radius: 5px;
+            font-size: 18px;
+        }
+
+        .countdown {
+            text-align: center;
+            margin-top: 20px;
+            font-size: 16px;
+            color: #6c757d;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container result-container">
+        <h1>Kết quả</h1>
+        {% if encrypted_text or decrypted_text %}
+        {% if encrypted_text %}
+        <div class="result-box">
+            <strong>Văn bản mã hóa:</strong> {{ encrypted_text }}
+        </div>
+        {% elif decrypted_text %}
+        <div class="result-box">
+            <strong>Văn bản giải mã:</strong> {{ decrypted_text }}
+        </div>
+        {% endif %}
+        {% else %}
+        <div class="alert alert-warning">Không có dữ liệu để hiển thị.</div>
+        {% endif %}
+
+
+        <div class="countdown">
+            Quay về trang chính sau <span id="countdown">5</span> giây...
+        </div>
+    </div>
+
+    <script>
+        let seconds = 5;
+        const countdownElement = document.getElementById("countdown");
+
+        const countdown = setInterval(() => {
+            seconds--;
+            countdownElement.textContent = seconds;
+
+            if (seconds <= 0) {
+                clearInterval(countdown);
+                window.location.href = "/"; // Đường dẫn về trang chính
+            }
+        }, 1000);
+    </script>
+</body>
+
+</html>

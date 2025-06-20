@@ -1,0 +1,59 @@
+<!-- caesar.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Caesar Cipher</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+    <style>
+        body {
+            background-color: #f8f9fa;
+        }
+       .form-container {
+            max-width: 600px;
+            margin: 50px auto;
+            padding: 30px;
+            background-color: #ffffff;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+        }
+       .btn-primary {
+            width: 100%;
+        }
+    </style>
+</head>
+<body>
+    <div class="container form-container">
+        <h2 class="mb-4 text-center">Mã hóa Caesar Cipher</h2>
+        <form action="" method="post">
+            <h3>Mã hóa</h3>
+            <div class="form-group">
+                <label for="plain_text">Văn bản gốc:</label>
+                <input type="text" class="form-control" id="plain_text" name="plain_text" placeholder="Nhập văn bản cần mã hóa" required>
+            </div>
+            <div class="form-group">
+                <label for="key">Khóa (số nguyên):</label>
+                <input type="number" class="form-control" id="key" name="key" placeholder="Nhập khóa" required>
+            </div>
+            <button type="submit" name="encrypt">Mã hóa</button>
+        </form>
+        <form action="" method="post">
+            <h3>Giải mã</h3>
+            <div class="form-group">
+                <label for="cipher_text">Văn bản mã hóa:</label>
+                <input type="text" class="form-control" id="cipher_text" name="cipher_text" placeholder="Nhập văn bản mã hóa" required>
+            </div>
+            <div class="form-group">
+                <label for="key">Khóa (số nguyên):</label>
+                <input type="number" class="form-control" id="key" name="key" placeholder="Nhập khóa" required>
+            </div>
+            <button type="submit" name="decrypt">Giải mã</button>
+        </form>
+    </div>
+
+    <!-- Optional: Bootstrap JS and jQuery -->
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+</body>
+</html>

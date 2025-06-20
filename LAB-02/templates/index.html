@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Thuật toán mã hóa</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+    <style>
+        body {
+            background-color: #f8f9fa;
+        }
+        .header {
+            padding: 60px 0;
+            text-align: center;
+        }
+        .algo-list a {
+            text-decoration: none;
+        }
+        .algo-card {
+            transition: transform 0.2s ease;
+        }
+        .algo-card:hover {
+            transform: scale(1.05);
+        }
+    </style>
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg navbar-light bg-light shadow-sm">
+        <a class="navbar-brand font-weight-bold" href="#">THUẬT TOÁN MÃ HÓA SIÊU CẤP - HỌC MÃ HÓA CÙNG CÔ GIÁO THẠCH THẢO</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
+            aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav ml-auto">
+                <li class="nav-item active"><a class="nav-link" href="#">Caesar</a></li>
+                <li class="nav-item"><a class="nav-link" href="#">Rail Fence</a></li>
+                <li class="nav-item"><a class="nav-link" href="#">Vigenere</a></li>
+                <li class="nav-item"><a class="nav-link" href="#">Playfair</a></li>
+                <li class="nav-item"><a class="nav-link" href="#">Transposition</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <div class="container header">
+        <h1 class="display-4">Thuật toán mã hóa</h1>
+        <p class="lead">Chọn thuật toán bạn muốn sử dụng:</p>
+    </div>
+
+    <div class="container algo-list">
+        <div class="row">
+            <div class="col-md-4 mb-4">
+                <a href="/caesar">
+                    <div class="card algo-card shadow-sm">
+                        <div class="card-body text-center">
+                            <h5 class="card-title">Caesar</h5>
+                            <p class="card-text">Mã hóa đơn giản bằng dịch chuyển ký tự.</p>
+                        </div>
+                    </div>
+                </a>
+            </div>
+            <div class="col-md-4 mb-4">
+                <a href="/railfence">
+                    <div class="card algo-card shadow-sm">
+                        <div class="card-body text-center">
+                            <h5 class="card-title">Rail Fence</h5>
+                            <p class="card-text">Mã hóa theo hình rào chắn dạng zigzag.</p>
+                        </div>
+                    </div>
+                </a>
+            </div>
+            <div class="col-md-4 mb-4">
+                <a href="/vigenere">
+                    <div class="card algo-card shadow-sm">
+                        <div class="card-body text-center">
+                            <h5 class="card-title">Vigenere</h5>
+                            <p class="card-text">Mã hóa dựa trên nhiều bảng chữ cái dịch chuyển.</p>
+                        </div>
+                    </div>
+                </a>
+            </div>
+            <div class="col-md-6 mb-4">
+                <a href="/playfair">
+                    <div class="card algo-card shadow-sm">
+                        <div class="card-body text-center">
+                            <h5 class="card-title">Playfair</h5>
+                            <p class="card-text">Mã hóa bằng cặp chữ cái theo ma trận.</p>
+                        </div>
+                    </div>
+                </a>
+            </div>
+            <div class="col-md-6 mb-4">
+                <a href="/transposition">
+                    <div class="card algo-card shadow-sm">
+                        <div class="card-body text-center">
+                            <h5 class="card-title">Transposition</h5>
+                            <p class="card-text">Hoán vị vị trí ký tự để mã hóa.</p>
+                        </div>
+                    </div>
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <footer class="text-center mt-5 mb-3 text-muted">
+        © 2025 Thuật toán mã hóa
+    </footer>
+
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+</body>
+</html>
